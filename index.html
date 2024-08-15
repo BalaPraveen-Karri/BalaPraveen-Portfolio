@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTf-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bala Praveen karri - portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f51b9d3df3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.PNG " class="logo">
+            <ul id="sidemenu">
+                <li><a href="#heaader">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <br><span>Bala Praveen karri</span></h1>
+            <p>Software Engineer</p>
+        </div>
+     </div>
+</div>
+<!-------------about------------------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="justify">Hello, I’m Bala Praveen Karri, a recent B.Tech graduate with a specialization in Electronics and Communication
+                    Engineering. As a budding Java Full Stack Developer, I’ve gained hands-on experience 
+                    in both front-end and back-end technologies through my academic projects and cources. 
+                    I’m proficient in Java, Spring Boot, and various front-end frameworks like Angular and React.
+                    I’m passionate about building scalable web applications and am eager to contribute my skills 
+                    to innovative projects.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java, HTML, CSS, JavaScript,SQL</li>
+                        <li><span>Framework</span><br>SpringBoot</li>
+                        <li><span>Tools</span><br>GitHub, Eclipse, VS Code, Springboot,JDK</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B - Tech</span><br>DNR college of Engineering and Technology<br>Electronics and communication Engineering - 6.39 CGPA</li>
+                        <li><span>Diploma</span><br>Smt B. Seeta Polytechnic<br>Electronics and communication Engineering - 6.39 CGPA</li>
+                        <li><span> SSC</span><br>BRRM ZPH School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Training Accelerator for Two Means Decision Tree</span><br>
+                            Tools: Xilinx, VHDL
+                            <br>
+                            <br>Responsibilities:
+                            <ul>
+                                <li>Developed Two Means Decision Tree Algorithm by using Verilog Hardware Description Language.</li>
+                                <li>high speed training accelerator to reduce the processing time.</li>
+                                <li>DT training is time-consuming, in this brief, proposed a hardware training accelerator to speed up the training 
+                                process</li>
+                            </ul>
+                        </li>
+                        <!--<li><span>app Dev</span><br>SpringBoot</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------services---------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I create visually striking and user-friendly web designs that not only look great but also provide a 
+                    seamless experience for your visitors. </p>
+                <a href="#">More</a> 
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>I specialize in both User Interface (UI) and User Experience(UX) design to deliver solutions that are 
+                    not only visually appealing but also highly functional.</p>
+                <a href="#">More</a> 
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>I specialize in developing high-performance applications tailored to your specific needs. I use the latest
+                     technologies to create robust, scalable, and user-centric solutions.</p>
+                <a href="#">More</a> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------contact----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>  balapraveenkarri@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>  +91 7993512063</p>
+                <a href="imeges/Resume.pdf" class="btn btn2">Download CV</a>
+            </div>
+            
+            <div class="contact-right">
+                <h1 class="sub-title">My Accounts</h1>
+                <a href="https://www.linkedin.com/in/bala-praveen-karri/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/BalaPraveen-Karri"><i class="fa-brands fa-square-github"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks)
+        tablink.classList.remove("active-link");
+        for(tabcontent of tabcontents)
+        tabcontent.classList.remove("active-tab");
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
