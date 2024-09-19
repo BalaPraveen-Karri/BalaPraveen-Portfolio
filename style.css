@@ -27,9 +27,9 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
-    width: 160px;
-}
+nav h1{
+    font-family: monospace;
+}  
 nav ul li{
     display: inline-block;
     list-style: none;
